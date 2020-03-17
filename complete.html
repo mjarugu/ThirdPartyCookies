@@ -1,11 +1,9 @@
 <body>
 <script>
- if (window.parent) {
-	if (/thirdparty=yes/.test(document.cookie)) {
-		window.parent.postMessage('supported', '*');
-	} else {
-		window.parent.postMessage('notsupported', '*');
-	}
- }
+if (/thirdparty=yes/.test(document.cookie)) {
+	window.parent.postMessage('supported', '*');
+} else {
+	window.parent.postMessage('notsupported', '*');
+}
 </script>
 </body>
