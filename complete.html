@@ -1,9 +1,12 @@
 <body>
 <script>
-if (/thirdparty=yes/.test(document.cookie)) {
-	window.parent.postMessage('supported', '*');
-} else {
-	window.parent.postMessage('notsupported', '*');
-}
+ if (window.parent) {
+	if (/thirdparty=yes/.test(document.cookie)) {
+		window.parent.postMessage('supported', '*');
+	} else {
+		window.parent.postMessage('notsupported', '*');
+	}
+	console.log("inside window parent")
+ }
 </script>
 </body>
