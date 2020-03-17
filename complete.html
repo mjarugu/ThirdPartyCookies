@@ -2,9 +2,9 @@
 <script>
  if (window.top) {
 	if (/thirdparty=yes/.test(document.cookie)) {
-		window.top.postMessage('supported', window.location.hostname);
+		window.top.postMessage('supported', window.origin);
 	} else {
-		window.top.postMessage('notsupported', window.location.hostname);
+		window.top.postMessage('notsupported', window.origin);
 	}
  }
 </script>
